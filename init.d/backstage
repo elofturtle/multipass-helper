@@ -32,7 +32,7 @@ nvm use --lts
 mkdir -p lab && cd lab
 npm install -g yarn 
 sleep 3
-npx @backstage/create-app <<< "foo"
-sed -i "s/localhost:3000/$(hostname -I | grep -v 127 | head -n 1):3000/g" "$HOME/backstage/foo/app-config.yaml" # setting it to not localhost seems to allow incoming connections
+npx @backstage/create-app <<< "my-first-backstage-app"
+sed -i "s/localhost:3000/$(hostname -I | grep -v 127 | head -n 1):3000/g" "$HOME/lab/my-first-backstage-app/app-config.yaml" # setting it to not localhost seems to allow incoming connections
 sleep 3
 cd foo && yarn dev
